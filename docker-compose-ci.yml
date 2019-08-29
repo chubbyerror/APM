@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+  apm.build:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+
+  apm.pack:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    entrypoint: ["bash", "/scripts/pack.entrypoint.sh"]
+    volumes: 
+      - ${BUILD_ARTIFACT_STAGING_DIRECTORY}/pack:/var/temp/pack
