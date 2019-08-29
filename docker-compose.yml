@@ -1,0 +1,15 @@
+version: '3.5'
+
+services:
+  apm.build:
+    image: apm.build
+    build:
+      context: .
+      dockerfile: Dockerfile
+      
+  apm.pack:
+    image: apm.pack
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: pack
