@@ -57,15 +57,17 @@ namespace Cortlex.APM.Health.Publishers.InfluxDb
             {
                 var pointToWrite = new Point()
                 {
-                    Name = $"{AppDomain.CurrentDomain.FriendlyName}.{entry.Key}",
+                    Name = "application.health",
                     Tags = new Dictionary<string, object>()
                     {
+                        { "app", System.Reflection.Assembly.GetExecutingAssembly().GetName().Name },
+                        { "server", System.Environment.MachineName },
+                        { "env", Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT ") },
                         { "CheckType", entry.Key },
                         { "HealthStatusString", entry.Value.Status.ToString() }
                     },
                     Fields = new Dictionary<string, object>()
                     {
-                        { "Duration", entry.Value.Duration.ToString() },
                         { "HealthStatusInt", (int)entry.Value.Status },
                         { "HealthStatusString", entry.Value.Status.ToString() },
                     },
