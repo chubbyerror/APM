@@ -11,13 +11,15 @@ namespace Cortlex.APM.Health.Publishers.InfluxDb
 {
     public class InfluxDbPublisher : IHealthCheckPublisher
     {
-        public InfluxDbPublisher(string endpoint, string login, string password, InfluxDbVersion dbVersion, string dbName)
+        public InfluxDbPublisher(string endpoint, string login, string password, InfluxDbVersion dbVersion, string dbName, string applicationName, string environmentName)
         {
             Endpoint = endpoint;
             Login = login;
             Password = password;
             DbVersion = dbVersion;
             DbName = dbName;
+            ApplicationName = applicationName;
+            EnvironmentName = environmentName;
         }
 
         private string Endpoint { get; }
@@ -27,6 +29,10 @@ namespace Cortlex.APM.Health.Publishers.InfluxDb
         private string Password { get; }
 
         private string DbName { get; }
+
+        private string ApplicationName { get; }
+
+        private string EnvironmentName { get; }
 
         private InfluxDbVersion DbVersion { get; }
 
@@ -60,9 +66,9 @@ namespace Cortlex.APM.Health.Publishers.InfluxDb
                     Name = "application.health",
                     Tags = new Dictionary<string, object>()
                     {
-                        { "app", System.Reflection.Assembly.GetExecutingAssembly().GetName().Name },
-                        { "server", System.Environment.MachineName },
-                        { "env", Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT ") },
+                        { "app", ApplicationName },
+                        { "server", Environment.MachineName },
+                        { "env", EnvironmentName },
                         { "CheckType", entry.Key },
                         { "HealthStatusString", entry.Value.Status.ToString() }
                     },
