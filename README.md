@@ -73,7 +73,7 @@ Install-Package Cortlex.APM.Health.Publishers.InfluxDb -Version 1.0.4-alpha
 ```
 
 
-## Workaround for Asp.NET Core (before 2.2) 
+## Workaround for Asp.NET Core (before 3.0) 
 https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks?view=aspnetcore-2.2
 
 You must add following code at Startup.cs
