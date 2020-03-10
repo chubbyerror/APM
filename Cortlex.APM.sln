@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29123.88
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cortlex.APM.Health.Publishers.InfluxDb", "src\Cortlex.APM.Health.Publishers.InfluxDb\Cortlex.APM.Health.Publishers.InfluxDb.csproj", "{55993D7F-BA63-4332-B46E-1B81B7A78651}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cortlex.APM.Health.Publishers.InfluxDb", "src\Publishers\Cortlex.APM.Health.Publishers.InfluxDb\Cortlex.APM.Health.Publishers.InfluxDb.csproj", "{5BA22086-7237-48BF-A0EC-4DE3303F50DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{55993D7F-BA63-4332-B46E-1B81B7A78651}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{55993D7F-BA63-4332-B46E-1B81B7A78651}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{55993D7F-BA63-4332-B46E-1B81B7A78651}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{55993D7F-BA63-4332-B46E-1B81B7A78651}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BA22086-7237-48BF-A0EC-4DE3303F50DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BA22086-7237-48BF-A0EC-4DE3303F50DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BA22086-7237-48BF-A0EC-4DE3303F50DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BA22086-7237-48BF-A0EC-4DE3303F50DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
